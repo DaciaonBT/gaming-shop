@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>گیم‌پلنت | فروشگاه تخصصی گیمینگ</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800;900&display=swap">
+<style>
+:root{--bg:#0c0f2b;--bg2:#171a45;--ink:#f3f4ff;--mute:#a9aed6;--glass:rgba(255,255,255,.07);--line:rgba(255,255,255,.16);--pink:#ff4d8d;--cyan:#3de0ff;--violet:#8b5cff;--shadow:0 20px 50px rgba(0,0,0,.35);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#eef0ff;--bg2:#dfe3ff;--ink:#14173d;--mute:#575c8c;--glass:rgba(255,255,255,.6);--line:rgba(20,23,61,.14);--shadow:0 20px 50px rgba(60,60,140,.18)}}
+:root[data-theme="light"]{--bg:#eef0ff;--bg2:#dfe3ff;--ink:#14173d;--mute:#575c8c;--glass:rgba(255,255,255,.6);--line:rgba(20,23,61,.14);--shadow:0 20px 50px rgba(60,60,140,.18)}
+:root[data-theme="dark"]{--bg:#0c0f2b;--bg2:#171a45;--ink:#f3f4ff;--mute:#a9aed6;--glass:rgba(255,255,255,.07);--line:rgba(255,255,255,.16)}
+html{scroll-padding-top:90px;scroll-behavior:smooth}
+*{box-sizing:border-box;margin:0}
+body{font-family:Vazirmatn,Tahoma,sans-serif;background:var(--bg);color:var(--ink);line-height:1.8;min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(600px 400px at 85% 8%,rgba(255,77,141,.35),transparent 70%),radial-gradient(700px 500px at 10% 30%,rgba(139,92,255,.35),transparent 70%),radial-gradient(600px 400px at 60% 90%,rgba(61,224,255,.22),transparent 70%)}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+.glass{background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);border-radius:22px;box-shadow:var(--shadow)}
+.wrap{max-width:1200px;margin:auto;padding:0 18px}
+header{position:sticky;top:10px;z-index:30;margin:10px 12px 0}
+.nav{display:flex;align-items:center;gap:14px;padding:10px 18px;max-width:1200px;margin:auto}
+.logo{font-weight:900;font-size:1.3rem;white-space:nowrap}.logo i{font-style:normal;background:linear-gradient(90deg,var(--pink),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.search{flex:1;display:flex;align-items:center;gap:8px;padding:8px 16px;border-radius:14px;background:var(--glass);border:1px solid var(--line)}
+.search input{flex:1;background:none;border:0;color:var(--ink);font:inherit;outline:0;min-width:0}
+.ib{position:relative;width:42px;height:42px;border-radius:13px;background:var(--glass);border:1px solid var(--line);display:grid;place-items:center;font-size:1.15rem}
+.badge{position:absolute;top:-6px;left:-6px;min-width:20px;height:20px;border-radius:10px;background:var(--pink);color:#fff;font-size:.72rem;display:grid;place-items:center;padding:0 5px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding:60px 0 40px}
+.hero h1{font-size:clamp(2.2rem,5.5vw,4.2rem);font-weight:900;line-height:1.25}
+.hero h1 span{background:linear-gradient(100deg,var(--pink),var(--violet),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mute);max-width:46ch;margin:16px 0 26px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 26px;border-radius:14px;font-weight:600;transition:transform .2s}
+.btn:active{transform:scale(.96)}
+.pri{background:linear-gradient(100deg,var(--pink),var(--violet));color:#fff;box-shadow:0 10px 30px rgba(255,77,141,.4)}
+.sec{background:var(--glass);border:1px solid var(--line)}
+.stage{perspective:1000px;height:360px;position:relative}
+.tilt{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .15s}
+.hc{position:absolute;width:62%;aspect-ratio:3/4;border-radius:26px;padding:18px;display:flex;flex-direction:column;justify-content:flex-end;font-weight:800}
+.hc b{font-size:4rem;line-height:1;position:absolute;top:18px;right:18px}
+.hc small{font-weight:400;color:var(--mute)}
+.hc.a{right:0;top:0;transform:translateZ(20px) rotate(4deg);background:linear-gradient(160deg,rgba(255,77,141,.5),rgba(139,92,255,.25))}
+.hc.b{right:22%;top:30px;transform:translateZ(70px) rotate(-5deg);background:linear-gradient(160deg,rgba(61,224,255,.45),rgba(139,92,255,.3))}
+.hc.c{left:0;top:70px;transform:translateZ(120px) rotate(2deg);background:linear-gradient(160deg,rgba(139,92,255,.55),rgba(255,77,141,.3))}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:46px}
+.trust div{padding:16px;display:flex;gap:12px;align-items:center;font-size:.9rem}.trust b{font-size:1.6rem}.trust small{display:block;color:var(--mute)}
+.sale{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:22px 28px;margin-bottom:46px;background:linear-gradient(100deg,rgba(255,77,141,.28),rgba(139,92,255,.2))}
+.sale h2{font-size:1.4rem}.cd{display:flex;gap:8px;direction:ltr}
+.cd span{min-width:58px;text-align:center;padding:8px;border-radius:12px;background:var(--glass);border:1px solid var(--line);font-weight:800;font-size:1.3rem}
+.cd small{display:block;font-size:.65rem;font-weight:300;color:var(--mute)}
+h2.t{font-size:1.7rem;font-weight:800;margin-bottom:16px}
+.bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:22px}
+.chip{padding:8px 18px;border-radius:999px;background:var(--glass);border:1px solid var(--line);font-size:.92rem;transition:.2s}
+.chip[aria-pressed=true]{background:linear-gradient(100deg,var(--pink),var(--violet));color:#fff;border-color:transparent}
+select{margin-inline-start:auto;padding:8px 14px;border-radius:12px;background:var(--glass);color:var(--ink);border:1px solid var(--line);font:inherit}
+select option{color:#111}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.card{padding:14px;display:flex;flex-direction:column;gap:10px;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-6px);border-color:var(--cyan)}
+.img{height:170px;border-radius:16px;display:grid;place-items:center;font-size:4.2rem;position:relative;cursor:pointer;overflow:hidden}
+.off{position:absolute;top:10px;right:10px;background:var(--pink);color:#fff;font-size:.78rem;font-weight:700;padding:2px 10px;border-radius:999px}
+.wish{position:absolute;top:8px;left:8px;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.28);font-size:1.1rem;color:#fff}
+.wish.on{color:var(--pink)}
+.card h3{font-size:1rem;font-weight:600}.meta{display:flex;justify-content:space-between;color:var(--mute);font-size:.84rem}
+.price{display:flex;align-items:baseline;gap:8px;font-weight:800}.price s{color:var(--mute);font-weight:300;font-size:.82rem}
+.card .btn{justify-content:center;padding:10px}
+.empty{grid-column:1/-1;text-align:center;padding:50px;color:var(--mute)}
+.news{margin:60px 0;padding:34px;text-align:center}
+.news form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+.news input{padding:12px 18px;border-radius:14px;background:var(--glass);border:1px solid var(--line);color:var(--ink);font:inherit;min-width:min(320px,100%)}
+footer{padding:30px 0 50px;color:var(--mute);font-size:.9rem;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.ov{position:fixed;inset:0;background:rgba(5,6,20,.55);z-index:40;opacity:0;pointer-events:none;transition:.25s}.ov.show{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;bottom:0;left:0;width:min(420px,100%);z-index:50;transform:translateX(-105%);transition:transform .3s;border-radius:0 24px 24px 0;display:flex;flex-direction:column;padding:20px;background:var(--bg2);padding-top:calc(20px + env(safe-area-inset-top,0px))}
+.drawer.show{transform:none}
+.items{flex:1;overflow:auto;display:flex;flex-direction:column;gap:12px;margin:14px 0}
+.it{display:flex;gap:12px;align-items:center;padding:10px;border-radius:16px;background:var(--glass);border:1px solid var(--line)}
+.it .th{width:56px;height:56px;border-radius:12px;display:grid;place-items:center;font-size:1.8rem}
+.it div.i{flex:1;font-size:.88rem}.q{display:flex;align-items:center;gap:8px}.q button{width:28px;height:28px;border-radius:9px;background:var(--glass);border:1px solid var(--line)}
+.row{display:flex;justify-content:space-between;margin:6px 0}.tot{font-weight:900;font-size:1.2rem}
+.cp{display:flex;gap:8px;margin:10px 0}.cp input{flex:1;min-width:0;padding:10px 14px;border-radius:12px;background:var(--glass);border:1px solid var(--line);color:var(--ink);font:inherit}
+.modal{position:fixed;z-index:60;top:50%;left:50%;width:min(720px,92%);transform:translate(-50%,-46%) scale(.96);opacity:0;pointer-events:none;transition:.25s;padding:22px;background:var(--bg2);display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.modal.show{opacity:1;pointer-events:auto;transform:translate(-50%,-50%)}
+.modal .img{height:100%;min-height:220px;font-size:6rem;cursor:default}
+.modal ul{list-style:none;padding:0;color:var(--mute);font-size:.9rem;margin:10px 0}
+#toast{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));left:50%;transform:translate(-50%,120px);z-index:70;padding:12px 24px;border-radius:14px;transition:transform .3s}
+#toast.show{transform:translate(-50%,0)}
+@media(max-width:820px){.hero{grid-template-columns:1fr;padding-top:30px}.stage{height:300px}.trust{grid-template-columns:1fr 1fr}.modal{grid-template-columns:1fr}.logo{font-size:1.05rem}.nav{gap:8px;padding:8px 10px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="glass"><div class="nav">
+<a href="#" class="logo">🎮 گیم<i>پلنت</i></a>
+<label class="search"><span>🔍</span><input id="q" type="search" placeholder="جستجوی کنسول، هدست، کیبورد..." aria-label="جستجو"></label>
+<button class="ib" id="theme" aria-label="تغییر تم">🌓</button>
+<button class="ib" id="wl" aria-label="علاقه‌مندی‌ها">♥<span class="badge" id="wc">۰</span></button>
+<button class="ib" id="cartBtn" aria-label="سبد خرید">🛒<span class="badge" id="cc">۰</span></button>
+</div></header>
+
+<main class="wrap">
+<section class="hero">
+<div>
+<h1>جهان بازی را <span>حرفه‌ای‌تر</span> تجربه کن</h1>
+<p>کنسول، لوازم جانبی و بازی‌های اورجینال با گارانتی معتبر، ارسال سریع و قیمت‌های رقابتی.</p>
+<a class="btn pri" href="#shop">مشاهده محصولات</a> <a class="btn sec" href="#sale">تخفیف‌های امروز</a>
+</div>
+<div class="stage" id="stage"><div class="tilt" id="tilt">
+<div class="glass hc a"><b>🕹️</b>گیم‌پد پرو<small>از ۲٬۱۹۰٬۰۰۰ تومان</small></div>
+<div class="glass hc b"><b>🎧</b>هدست سورند<small>صدای ۷.۱ واقعی</small></div>
+<div class="glass hc c"><b>🎮</b>کنسول نوا X<small>۱۲۰ فریم، ۴K</small></div>
+</div></div>
+</section>
+
+<section class="trust">
+<div class="glass"><b>🚚</b><span>ارسال سریع<small>تحویل ۲۴ ساعته در تهران</small></span></div>
+<div class="glass"><b>🛡️</b><span>گارانتی اصالت<small>ضمانت ۱۸ ماهه</small></span></div>
+<div class="glass"><b>↩️</b><span>بازگشت ۷ روزه<small>بدون قید و شرط</small></span></div>
+<div class="glass"><b>💳</b><span>پرداخت امن<small>درگاه معتبر بانکی</small></span></div>
+</section>
+
+<section class="glass sale" id="sale">
+<div><h2>🔥 جشنواره شگفت‌انگیز گیمینگ</h2><small style="color:var(--mute)">کد <b>GAME10</b> را در سبد خرید وارد کنید و ۱۰٪ تخفیف بگیرید</small></div>
+<div class="cd" id="cd"></div>
+</section>
+
+<section id="shop">
+<h2 class="t">فروشگاه</h2>
+<div class="bar" id="bar"></div>
+<div class="grid" id="grid"></div>
+</section>
+
+<section class="glass news">
+<h2>از تخفیف‌ها زودتر باخبر شو</h2>
+<form id="nf"><input type="email" required placeholder="ایمیل شما" aria-label="ایمیل"><button class="btn pri">عضویت</button></form>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© ۱۴۰۵ گیم‌پلنت — همه حقوق محفوظ است</span><span>پشتیبانی: ۰۲۱-۱۲۳۴۵۶۷۸ · ۹ صبح تا ۹ شب</span></div></footer>
+
+<div class="ov" id="ov"></div>
+<aside class="drawer glass" id="drawer" aria-label="سبد خرید">
+<div class="row"><h2>سبد خرید</h2><button class="ib" id="close" aria-label="بستن">✕</button></div>
+<div class="items" id="items"></div>
+<div class="cp"><input id="code" placeholder="کد تخفیف" aria-label="کد تخفیف"><button class="btn sec" id="apply">اعمال</button></div>
+<div class="row"><span>جمع کالاها</span><span id="sub"></span></div>
+<div class="row"><span>تخفیف</span><span id="dis"></span></div>
+<div class="row"><span>ارسال</span><span id="ship"></span></div>
+<div class="row tot"><span>مبلغ قابل پرداخت</span><span id="tot"></span></div>
+<button class="btn pri" id="pay" style="justify-content:center;margin-top:8px">ادامه و پرداخت</button>
+</aside>
+<div class="modal glass" id="modal" role="dialog" aria-modal="true"></div>
+<div id="toast" class="glass" role="status"></div>
+
+<script>
+const P=[
+["کنسول نوا X ۱ ترابایت","کنسول",24900000,27500000,4.8,265,"🎮"],
+["کنسول دستی ترا Go","کنسول",16800000,0,4.5,190,"📱"],
+["گیم‌پد بی‌سیم پرو","گیم‌پد",2190000,2490000,4.7,320,"🕹️"],
+["گیم‌پد الیت با پدال","گیم‌پد",4350000,0,4.9,280,"🎛️"],
+["هدست سورند ۷.۱","هدست",3290000,3890000,4.6,200,"🎧"],
+["هدست بی‌سیم آیریس","هدست",5490000,0,4.8,170,"🎧"],
+["کیبورد مکانیکال RGB","کیبورد و ماوس",2750000,3200000,4.7,300,"⌨️"],
+["ماوس سبک ۶۰ گرمی","کیبورد و ماوس",1650000,0,4.6,215,"🖱️"],
+["مانیتور ۲۷ اینچ ۱۶۵Hz","مانیتور",12900000,14500000,4.8,240,"🖥️"],
+["صندلی گیمینگ ارگونومیک","صندلی",9800000,11200000,4.5,350,"💺"],
+["بازی ماجراجویی جهان‌باز","بازی",1890000,2200000,4.9,150,"💿"],
+["کارت هدیه ۵۰۰ هزار تومانی","بازی",500000,0,4.7,60,"🎁"]];
+const CATS=["همه",...new Set(P.map(p=>p[1]))];
+const S={cat:"همه",q:"",sort:"def",cart:{},wish:{},code:""};
+const $=s=>document.querySelector(s);
+const fa=n=>Math.round(n).toLocaleString("fa-IR");
+const T=n=>fa(n)+" تومان";
+try{Object.assign(S,JSON.parse(localStorage.getItem("gp")||"{}"));}catch(e){}
+const save=()=>{try{localStorage.setItem("gp",JSON.stringify({cart:S.cart,wish:S.wish,code:S.code}))}catch(e){}};
+const hue=i=>[330,260,190,300,210,350,160,40,230,20,280,140][i];
+const grad=i=>`linear-gradient(145deg,hsla(${hue(i)},90%,62%,.55),hsla(${hue(i)+50},85%,50%,.25))`;
+function toast(t){const e=$("#toast");e.textContent=t;e.classList.add("show");clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove("show"),2200)}
+function bar(){$("#bar").innerHTML=CATS.map(c=>`<button class="chip" aria-pressed="${c==S.cat}" data-c="${c}">${c}</button>`).join("")+`<select id="sort" aria-label="مرتب‌سازی"><option value="def">پیش‌فرض</option><option value="lo">ارزان‌ترین</option><option value="hi">گران‌ترین</option><option value="rt">بهترین امتیاز</option></select>`;$("#sort").value=S.sort}
+function grid(){
+let l=P.map((p,i)=>({p,i})).filter(({p})=>(S.cat=="همه"||p[1]==S.cat)&&p[0].includes(S.q));
+if(S.sort=="lo")l.sort((a,b)=>a.p[2]-b.p[2]);if(S.sort=="hi")l.sort((a,b)=>b.p[2]-a.p[2]);if(S.sort=="rt")l.sort((a,b)=>b.p[4]-a.p[4]);
+$("#grid").innerHTML=l.length?l.map(({p,i})=>{const d=p[3]?Math.round((1-p[2]/p[3])*100):0;return `<article class="glass card"><div class="img" style="background:${grad(i)}" data-v="${i}">${p[6]}${d?`<span class="off">${fa(d)}٪</span>`:""}<button class="wish ${S.wish[i]?"on":""}" data-w="${i}" aria-label="علاقه‌مندی">${S.wish[i]?"♥":"♡"}</button></div><h3>${p[0]}</h3><div class="meta"><span>⭐ ${p[4].toLocaleString("fa-IR")}</span><span>${p[1]}</span></div><div class="price">${T(p[2])}${p[3]?`<s>${fa(p[3])}</s>`:""}</div><button class="btn pri" data-a="${i}">افزودن به سبد</button></article>`}).join(""):`<div class="empty">محصولی پیدا نشد. عبارت دیگری را جستجو کنید.</div>`}
+function cart(){
+const ids=Object.keys(S.cart);let sub=0,n=0;
+$("#items").innerHTML=ids.length?ids.map(i=>{const p=P[i],q=S.cart[i];sub+=p[2]*q;n+=q;return `<div class="it"><div class="th" style="background:${grad(+i)}">${p[6]}</div><div class="i">${p[0]}<br><b>${T(p[2]*q)}</b></div><div class="q"><button data-q="${i}" data-d="1" aria-label="افزایش">+</button>${fa(q)}<button data-q="${i}" data-d="-1" aria-label="کاهش">−</button></div></div>`}).join(""):`<div class="empty">سبد خرید شما خالی است. از فروشگاه محصولی اضافه کنید.</div>`;
+const dis=S.code=="GAME10"?sub*.1:0,ship=!sub||sub>5e6?0:150000;
+$("#sub").textContent=T(sub);$("#dis").textContent=dis?"−"+T(dis):"—";$("#ship").textContent=sub?(ship?T(ship):"رایگان"):"—";$("#tot").textContent=T(sub-dis+ship);
+$("#cc").textContent=fa(n);$("#wc").textContent=fa(Object.keys(S.wish).length);$("#pay").disabled=!sub;save()}
+function add(i,d=1){S.cart[i]=(S.cart[i]||0)+d;if(S.cart[i]<=0)delete S.cart[i];cart()}
+const open=(el)=>{el.classList.add("show");$("#ov").classList.add("show")};
+const closeAll=()=>document.querySelectorAll(".show:not(#toast)").forEach(e=>e.classList.remove("show"));
+document.addEventListener("click",e=>{
+const t=e.target.closest("[data-c],[data-a],[data-w],[data-v],[data-q],[data-add]");
+if(t){const D=t.dataset;
+if(D.c){S.cat=D.c;bar();grid()}
+else if(D.a){add(+D.a);toast("به سبد خرید اضافه شد ✓")}
+else if(D.w){const k=D.w;S.wish[k]?delete S.wish[k]:S.wish[k]=1;grid();cart();e.stopPropagation()}
+else if(D.q){add(+D.q,+D.d)}
+else if(D.add){add(+D.add);closeAll();open($("#drawer"))}
+else if(D.v){const i=+D.v,p=P[i];$("#modal").innerHTML=`<div class="img" style="background:${grad(i)}">${p[6]}</div><div><h2>${p[0]}</h2><div class="meta"><span>⭐ ${p[4].toLocaleString("fa-IR")} از ۵</span><span>${fa(p[5])} نظر</span></div><ul><li>✔ گارانتی اصالت و سلامت فیزیکی</li><li>✔ ارسال در ۲۴ ساعت</li><li>✔ امکان پرداخت اقساطی</li></ul><div class="price" style="font-size:1.4rem">${T(p[2])}${p[3]?`<s>${fa(p[3])}</s>`:""}</div><button class="btn pri" style="margin-top:14px" data-add="${i}">افزودن و مشاهده سبد</button></div>`;open($("#modal"))}}
+});
+$("#ov").onclick=closeAll;$("#close").onclick=closeAll;$("#cartBtn").onclick=()=>open($("#drawer"));
+document.addEventListener("keydown",e=>{if(e.key=="Escape")closeAll()});
+$("#wl").onclick=()=>{S.cat="همه";S.q="";$("#q").value="";const w=Object.keys(S.wish).length;toast(w?`${fa(w)} محصول در علاقه‌مندی‌هاست`:"هنوز محصولی را نپسندیده‌اید")};
+$("#q").oninput=e=>{S.q=e.target.value.trim();grid()};
+document.addEventListener("change",e=>{if(e.target.id=="sort"){S.sort=e.target.value;grid()}});
+$("#apply").onclick=()=>{const v=$("#code").value.trim().toUpperCase();if(v=="GAME10"){S.code=v;toast("کد تخفیف اعمال شد ✓")}else toast("کد تخفیف معتبر نیست؛ دوباره بررسی کنید");cart()};
+$("#pay").onclick=()=>toast("این یک نمونه است؛ درگاه پرداخت متصل نیست");
+$("#nf").onsubmit=e=>{e.preventDefault();e.target.reset();toast("عضویت شما ثبت شد ✓")};
+$("#theme").onclick=()=>{const r=document.documentElement,d=r.dataset.theme?r.dataset.theme=="dark":!matchMedia("(prefers-color-scheme: light)").matches;r.dataset.theme=d?"light":"dark"};
+const stage=$("#stage"),tilt=$("#tilt");
+stage.onpointermove=e=>{const r=stage.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;tilt.style.transform=`rotateY(${x*16}deg) rotateX(${-y*16}deg)`};
+stage.onpointerleave=()=>tilt.style.transform="";
+const end=Date.now()+(8*3600+23*60)*1000;
+(function tick(){let s=Math.max(0,Math.floor((end-Date.now())/1000));const u=[["ثانیه",s%60],["دقیقه",Math.floor(s/60)%60],["ساعت",Math.floor(s/3600)]];$("#cd").innerHTML=u.map(([l,v])=>`<span>${String(v).padStart(2,"0").replace(/\d/g,d=>"۰۱۲۳۴۵۶۷۸۹"[d])}<small>${l}</small></span>`).join("");setTimeout(tick,1000)})();
+bar();grid();cart();
+</script>
+</body>
+</html>
